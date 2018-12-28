@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import restaurantList from './views/restaurant-list.vue'
-import manageRestaurant from './views/manage-restaurant.vue' // 여기
+import foodlist from './views/food-list.vue'
 
 Vue.use(Router)
 
+// 4. 어떤 주소에 어떤 컴포넌트를 렌더링할지 결정
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -17,14 +17,9 @@ export default new Router({
     },
     {
       path: '/list',
-      name: 'restaurantList',
-      component: restaurantList
+      name: 'foodlist',
+      component: foodlist
     },
-    { // 여기부터
-      path: '/manage',
-      name: 'manageRestaurant',
-      component: manageRestaurant
-    }, // 여기까지
     {
       path: '/about',
       name: 'about',
